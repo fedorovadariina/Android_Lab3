@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Относительное выравнивание, используется весь экран
+     и фоновая картинка "background1" -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bgnd1">
+
+    <!-- Выравнивание от верхнего края экрана (android:layout_alignParentTop="true")
+         по-центру по-горизонтали (android:gravity="center")
+         c наклоном текста в 4 градуса (android:rotation="4"),
+         желтым цветом (android:textColor="#F2E70E")
+         и 36 относительным размером android:textSize="36sp" -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        android:text="@string/Опрос"/>
+
+
+    <ImageView
+        android:id="@+id/ImageView"
+        android:layout_width="match_parent"
+        android:layout_height="171dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="-2dp"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:onClick="onInfo"
+        android:text="@string/Продолжить"/>
+
+</RelativeLayout>
